@@ -1,0 +1,13 @@
+<apex:page controller="TreinamentoController"> 
+    <apex:form>
+    <apex:pageBlock title="Dono Details">
+		<apex:pageblockSection title="Dono">
+			<apex:inputField value="{!dono.Nome__c}"/>
+			<apex:inputField value="{!dono.cpf__c}"/>
+		</apex:pageblockSection>
+		<apex:pageBlockButtons >
+			<apex:commandButton value="Save Collage" action="{!save}"/>
+		</apex:pageBlockButtons>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

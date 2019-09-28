@@ -24,9 +24,23 @@ public class CarrosHandler {
     }
 
 
+    public static void CriaLote(){
+        BatchbleExemple lote = new BatchbleExemple();
+        lote.query = 'SELECT Id, Nome__c FROM Carro__c';
+        ID batchprocessid = Database.executeBatch(lote);
+       
 
+    }
+
+    public static void CriaScheduleJob(){
+        ScheduleExemple shceduleExemp = new ScheduleExemple();
+        system.schedule('Schedule Treinamento', '01 08 15 27 09 ?', shceduleExemp);
+    }
      
-
+    public static void CriaFila(){
+        QueueableExemple fila = new QueueableExemple();
+        System.enqueueJob(fila);
+    }
 
 
 }
