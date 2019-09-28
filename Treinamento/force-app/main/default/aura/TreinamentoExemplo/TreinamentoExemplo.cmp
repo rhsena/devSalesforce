@@ -1,0 +1,32 @@
+<aura:component controller="TreinamentoExemploController"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="carro" type="Carro__c" default="{ sObject : ''}"/>
+    <aura:attribute name="conta" type="Account" default="{ sObject : 'Account'}"/>
+    <aura:attribute name="estruturaRepeticao" type="List"/>
+   	<aura:attribute name="nome" type="String"/>
+    <aura:attribute name="validaAlgo" type="Boolean"/>
+  
+    <div>
+        <div class="slds-card">
+            <div class="slds-p-around_medium">
+                <lightning:input label="Marca" value="{!v.carro.Nome__c}" onchange="{!c.algo}"/></div>
+        </div>
+        <div class="slds-card">
+            {!v.nome}
+            <div class="slds-p-around_medium"><lightning:input label="Modelo" value="{!v.carro.Modelo__c}" /></div>
+        </div>
+    </div>
+    
+    <div>
+       <!-- <c:MainComponentTreinamento nome="{!v.carro.Nome__c}"/> -->
+     <!--  <aura:iteration items="{!v.estruturaRepeticao}" var="item">
+       		
+       </aura:iteration> -->
+        
+    </div>
+    <div class='slds-align_absolute-center'><h1>{!v.nome}</h1>
+        <lightning:button class="brand" onclick="{!c.acaoDobotao}" label="Envia Carro"/>
+    </div>
+    <lightning:formattedText label="Marca" value="{!v.carro.Nome__c}"/>
+    
+</aura:component>

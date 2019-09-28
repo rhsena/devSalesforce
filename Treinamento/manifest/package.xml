@@ -8,10 +8,11 @@
         <members>TreinamentoExemplo</members>
         <name>AuraDefinitionBundle</name>
     </types>
-    <!--<types>
-        <members>*</members>
+    <types>
+        <members>TreinamentoExemploController</members>
         <name>ApexClass</name>
     </types>
+    <!--
     <types>
         <members>*</members>
         <name>ApexComponent</name>
