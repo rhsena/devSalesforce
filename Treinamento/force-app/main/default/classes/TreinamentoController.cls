@@ -6,6 +6,7 @@ public class TreinamentoController {
                    WHERE Id = 'a0Of400001E0eKcEAJ'];
     }
 
+    @future
    public Proprietario__c getProprietario(){
        return dono;
    }

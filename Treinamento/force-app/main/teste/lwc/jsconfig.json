@@ -4,13 +4,13 @@
         "baseUrl": ".",
         "paths": {
             "c/newLWCTreinamento": [
-                "../../teste/lwc/newLWCTreinamento/newLWCTreinamento.js"
+                "newLWCTreinamento/newLWCTreinamento.js"
             ],
             "c/lwcBindingTest": [
-                "lwcBindingTest/lwcBindingTest.js"
+                "../../default/lwc/lwcBindingTest/lwcBindingTest.js"
             ],
             "c/lwcSenaWaveExem": [
-                "lwcSenaWaveExem/lwcSenaWaveExem.js"
+                "../../default/lwc/lwcSenaWaveExem/lwcSenaWaveExem.js"
             ]
         }
     },

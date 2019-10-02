@@ -1,0 +1,20 @@
+<template>
+<!--deploy com o ANT -->
+    <div>
+        <div class="slds-card">
+            <div class="slds-p-around_medium">
+                <lightning-input label="Nome" value={nome} onchange={changeValue}></lightning-input>
+            </div>
+        </div>
+    </div>
+  {nome}
+     <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>
+    <template if:true={carros.data}>
+        <template for:each={carros.data} for:item="carro">
+            <p  key={carro.Id}>{carro.Nome__c}</p>
+        </template>
+    </template>
+         <lightning-button variant="brand" label="enviar"  onclick={goToEnviar}>
+    </lightning-button> 
+
+</template>

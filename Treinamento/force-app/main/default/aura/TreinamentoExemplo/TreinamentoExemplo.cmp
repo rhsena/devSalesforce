@@ -4,7 +4,9 @@
     <aura:attribute name="conta" type="Account" default="{ sObject : 'Account'}"/>
     <aura:attribute name="estruturaRepeticao" type="List"/>
    	<aura:attribute name="nome" type="String"/>
-    <aura:attribute name="validaAlgo" type="Boolean"/>
+    <aura:attribute name="validaAlgo" type="Boolean" default="true"/>
+   
+    <aura:attribute name="recordId" type="String" />
   
     <div>
         <div class="slds-card">
@@ -16,12 +18,17 @@
             <div class="slds-p-around_medium"><lightning:input label="Modelo" value="{!v.carro.Modelo__c}" /></div>
         </div>
     </div>
-    
+    <aura:if isTrue="{!v.validaAlgo}">
+        <c:MainComponentTreinamento nome="{!v.carro.Nome__c}"/>
+    </aura:if>
+
     <div>
-       <!-- <c:MainComponentTreinamento nome="{!v.carro.Nome__c}"/> -->
+       <!--  -->
      <!--  <aura:iteration items="{!v.estruturaRepeticao}" var="item">
        		
        </aura:iteration> -->
+        
+        <lightning:button class="brand" onclick="{!c.acaoDobotao2}" label="toggle"/>
         
     </div>
     <div class='slds-align_absolute-center'><h1>{!v.nome}</h1>

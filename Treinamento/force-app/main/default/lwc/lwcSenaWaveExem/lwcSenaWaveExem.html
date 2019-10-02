@@ -1,0 +1,23 @@
+<template>
+    <div>
+        <lightning-input type="number" label="cpf" value={inputTest}  onchange={onInputCpf} pattern="[0-1]*" message-when-pattern-mismatch='atcho que está fazendo merda'></lightning-input>
+    </div>
+
+    <div>
+        <p><lightning-formatted-text value={showMessage} ></lightning-formatted-text></p> 
+         parent {showMessage}
+    </div>
+    <div>
+        <lightning-record-view-form object-api-name="Account" record-id={acc.id}> 
+            <lightning-messages>
+            </lightning-messages>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+        </lightning-record-view-form>
+    </div>
+    <div>
+        <lightning-button variant="brand" label="get Acc" title="Brand action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    <div>
+       <c-lwc-binding-test input-test={inputTest}></c-lwc-binding-test>
+    </div>
+</template>
