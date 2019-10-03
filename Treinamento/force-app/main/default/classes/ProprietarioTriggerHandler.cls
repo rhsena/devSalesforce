@@ -22,12 +22,12 @@ public with sharing class ProprietarioTriggerHandler implements ITriggerHandler
     }
  
     public void AfterUpdate(Map<Id, SObject> newItems, Map<Id, SObject> oldItems) {
-        Map<Id,Proprietario__c> proprietarios = (Map<Id,Proprietario__c>)newItems;
-        List<Carro__c> carros = [SELECT Nome__c, Proprietario__r.Nome__c FROM Carro__c WHERE Proprietario__c.Id IN :proprietarios.keySet() ];
-        for(Carro__c carro : carros){
-            carro.Nome__c = carro.Nome__c + ' do ' + carro.Proprietario__r.Nome__c;
-        }
-        update carros;
+        // Map<Id,Proprietario__c> proprietarios = (Map<Id,Proprietario__c>)newItems;
+        // List<Carro__c> carros = [SELECT Nome__c, Proprietario__r.Nome__c FROM Carro__c WHERE Proprietario__c.Id IN :proprietarios.keySet() ];
+        // for(Carro__c carro : carros){
+        //     carro.Nome__c = carro.Nome__c + ' do ' + carro.Proprietario__r.Nome__c;
+        // }
+        // update carros;
     }
  
     public void AfterDelete(Map<Id, SObject> oldItems) {}

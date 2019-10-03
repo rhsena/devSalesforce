@@ -3,7 +3,6 @@
   <types>
     <name>AuraDefinitionBundle</name>
     <members>ExemploAuraCreate</members>
-    <members>TreinamentoExemplo</members>
   </types>
   <types>
     <name>ApexClass</name>
@@ -28,7 +27,6 @@
   </types>
   <types>
     <name>LightningComponentBundle</name>
-    <members>newLWCTreinamento</members>
     <members>treinamentoLWC</members>
   </types>
   <types>

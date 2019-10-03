@@ -3,14 +3,8 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
-            "c/newLWCTreinamento": [
-                "../../teste/lwc/newLWCTreinamento/newLWCTreinamento.js"
-            ],
-            "c/lwcBindingTest": [
-                "lwcBindingTest/lwcBindingTest.js"
-            ],
-            "c/lwcSenaWaveExem": [
-                "lwcSenaWaveExem/lwcSenaWaveExem.js"
+            "c/treinamentoLWC": [
+                "treinamentoLWC/treinamentoLWC.js"
             ]
         }
     },

@@ -21,7 +21,12 @@ public with sharing class ProprietarioHandler {
 
     private void criaCarroHandler(Proprietario__c prop){
         CarrosHandler carHandler = new CarrosHandler();
-        carHandler.criaCarro(prop);
+        Carro__c carro = new Carro__c();
+        carro.Modelo__c = 'Corolla';
+        carro.Nome__c = 'Toyota';
+        carro.Cor__c = 'Prata';
+       
+        carHandler.criaCarro(carro,prop);
     
     }
 
